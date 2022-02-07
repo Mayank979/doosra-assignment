@@ -1,0 +1,14 @@
+<% users.forEach(u => { %>
+    <h4>Name: <%= u.name%></h4>
+    <h5>lat: <%= u.lat%></h5>
+    <h5>lng: <%= u.lng%></h5>
+    <h5>in ride: <%= u.inRide%></h5>
+    <% if (!u.inRide) { %>
+    <form action="/trips/start/<%= u.id%>" method="POST">    
+        <button type="submit" class="btn btn-primary">Start Ride</button>
+      </form>
+    <%} else { %>
+        <h5>user currently in ride</h5>
+        <% } %>
+    </hr></br>
+<% }) %>

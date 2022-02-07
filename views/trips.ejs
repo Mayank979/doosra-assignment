@@ -1,0 +1,11 @@
+<% trips.forEach(t => { %>
+    <h4>User Id: <%= t.user_id%></h4>
+    <h5>Rider Id: <%= t.rider_id%></h5>
+    <h5>Status: <%= t.status%></h5>
+    <% if (t.status != 'completed') {%>
+    <form action="/trips/end/<%= t.id%>" method="POST">    
+        <button type="submit" class="btn btn-primary">End Ride</button>
+      </form>
+    <%}%>
+    </hr></br>
+<% }) %>
