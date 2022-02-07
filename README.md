@@ -4,6 +4,8 @@ How to start:
     1: npm install
     2: npm start
 
+Application will start on Port 3000
+
 Pages:
 
     Admin: 
